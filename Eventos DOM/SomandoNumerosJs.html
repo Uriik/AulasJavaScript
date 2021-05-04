@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Soman, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<body>
+    <h1>Somando Numeros</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <p id="res">Resultado: </p>
+
+    <h1>Subitraindo Numeros</h1>
+
+    <input type="number" name="txtn3" id="txtn3"> -
+    <input type="number" name="txtn4" id="txtn4">
+    <input type="button" value="subtrair" onclick="subitrair()">
+    <p id="rest">Resultado: </p>
+
+    <h1>Multiplicando Numeros</h1>
+
+    <input type="number" name="txtn5" id="txtn5"> *
+    <input type="number" name="txtn6" id="txtn6">
+    <input type="button" value="mutiplicar" onclick="multiplicar()">
+    <p id="result">Resultado: </p>
+
+    <h1>Dividindo Numeros</h1>
+
+    <input type="number" name="txtn7" id="txtn7"> /
+    <input type="number" name="txtn8" id="txtn8">
+    <input type="button" value="dividir" onclick="dividir()">
+    <p id="resulta">Resultado: </p>
+    <script>
+
+        function somar(){
+            var tn1 = document.querySelector('input#txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var res = document.querySelector('p#res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = ` A soma de ${n1} + ${n2} é igual a ${s}`
+
+        }
+
+        function subitrair(){
+            var tn3 = document.querySelector('input#txtn3')
+            var tn4 = document.querySelector('input#txtn4')
+            var rest = document.querySelector('p#rest')
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var ss = n3 - n4
+            rest.innerHTML = `A subitração de ${n3} - ${n4} é igual a ${ss}`
+        }
+
+        function multiplicar(){
+            var tn5 = document.querySelector('input#txtn5')
+            var tn6 = document.querySelector('input#txtn6')
+            var result = document.querySelector('p#result')
+            var n5 = Number(tn5.value)
+            var n6 = Number(tn6.value)
+            var sss= n5 * n6
+            result.innerHTML = `A multiplicação de ${n5} x ${n6} é igual a ${sss}` 
+        }
+
+        function dividir(){
+            var tn7 = document.querySelector('input#txtn7')
+            var tn8 = document.querySelector('input#txtn8')
+            var resulta = document.querySelector('p#resulta')
+            var n7 = Number(tn7.value)
+            var n8 = Number(tn8.value)
+            var ssss = n7 / n8
+            resulta.innerHTML = `A divisão de ${n7} / ${n8} é igual a ${ssss}`
+        }
+
+    </script>
+</body>
+</html>
