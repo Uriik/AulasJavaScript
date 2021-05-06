@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Servico de migração</h1>
+
+    Coloque seu pais: <input type="text" id="txtn1">
+    <input type="button" value="verificar" onclick="descobrir()">
+    <div id="res"></div>
+
+    <script>
+
+        function descobrir(){
+            var n1 = document.getElementById('txtn1')
+            var res = document.getElementById('res')
+            var vel = String(n1.value)
+            res.innerText = `Seu pais é ${vel}`
+            
+            if (vel == 'Brasil'){
+                res.innerHTML = `você é Brasileiro`
+            } else {
+                res.innerHTML = `você é estrangeiro`
+            }
+        }
+
+    </script>
+</body>
+</html>
